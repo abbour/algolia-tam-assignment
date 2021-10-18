@@ -112,6 +112,11 @@
   font-size: 12px;
 }
 
+.autocomplete-suggestion {
+  font-size: 12px;
+   padding: 0;
+}
+
 /*Results*/
 .results {
   max-width: 1200px;

@@ -1,9 +1,5 @@
-const autocompleteData = hit => `<div class="autocomplete-product">
-  <div class="autocomplete-product__details">
-    
-    <p class="autocomplete-product__price">${hit._highlightResult.query.value}</p> 
-  </div>
-    
-</div>`;
+const autocompleteData = hit => `
+    <div class="autocomplete-suggestion">${hit._highlightResult.query.value}</div> 
+`;
 
 export default autocompleteData;
