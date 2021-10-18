@@ -2,10 +2,15 @@ import algoliasearch from 'algoliasearch';
 import instantsearch from 'instantsearch.js';
 
 // Instant Search Widgets
-import { hits, searchBox, configure } from 'instantsearch.js/es/widgets';
+import { hierarchicalMenu, hits, searchBox, configure, index } from 'instantsearch.js/es/widgets';
 
 // Autocomplete Template
 import autocompleteProductTemplate from '../templates/autocomplete-product';
+import autocompleteData from '../templates/autocomplete-data';
+
+// TODO: move to conf file
+const APP_NAME = '1LFNP5HQEZ';
+const API_KEY = '236da3e09076873e7aa7917049c9aa46';
 
 /**
  * @class Autocomplete
@@ -28,15 +33,16 @@ class Autocomplete {
    */
   _registerClient() {
     this._searchClient = algoliasearch(
-      'VYLEWMPKEZ',
-      '8940a18fde155adf3f74b0912c267aa4'
+      APP_NAME,
+      API_KEY
     );
 
     this._searchInstance = instantsearch({
-      indexName: 'ecommerce-v2',
+      indexName: 'demo_SpencerAndWilliams',
       searchClient: this._searchClient,
     });
   }
+
 
   /**
    * @private
@@ -46,15 +52,26 @@ class Autocomplete {
   _registerWidgets() {
     this._searchInstance.addWidgets([
       configure({
-        hitsPerPage: 3,
+        hitsPerPage: 5,
       }),
       searchBox({
         container: '#searchbox',
       }),
+	    
       hits({
         container: '#autocomplete-hits',
         templates: { item: autocompleteProductTemplate },
       }),
+      // Autocomplete
+      index({ indexName: 'demo_SpencerAndWilliams_query_suggestions' }).addWidgets([
+        configure({ hitsPerPage: 4 }),
+        hits({
+          container: '#suggestions',
+          templates: {
+			  item:autocompleteData
+          },
+        }),
+      ]),
     ]);
   }
 
