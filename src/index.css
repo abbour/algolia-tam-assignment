@@ -12,3 +12,14 @@ body {
 a:hover {
   background-color: gray;
 }
+
+.ais-Hits-item, .ais-InfiniteHits-item, .ais-InfiniteResults-item, .ais-Results-item {
+padding: 0px;
+}
+
+.searchSectionHeader{
+    margin: 1rem;
+    padding: 0.5rem;
+	font-size:20px;
+	font-weight:bold;
+}
