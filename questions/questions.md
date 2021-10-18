@@ -12,8 +12,7 @@ Thanks,
 Marissa  
 
 
-
-*Answer 1:*
+# Answer 1:
 
 Hello Marissa,
 
@@ -46,7 +45,7 @@ Our website is an imdb like website where users can post reviews of coffee shops
 Please advise on how to fix this. Thanks.   
 
 
-*Answer 2:*
+# Answer 2:
 
 Dear Carrie,
 
@@ -55,10 +54,10 @@ We apologize for the inconvenience and the errors you are encountering. I unders
 This error occurs when you reach the size limits of a record. Algolia set these limits for performance reasons.
  
 You can find below the size limits related to your plan:
-	• For Standard and Premium plans: 
+	* For Standard and Premium plans: 
 		○ 100 KB for any individual record
 		○ 10 KB average record size across all records
-	• For legacy plans (before July 1, 2020): 
+	* For legacy plans (before July 1, 2020): 
 		○ 10 KB for Pro, Starter, or Free accounts
 		○ 20 KB for Essential and Plus
 		○ Business and Enterprise accounts have a 100 KB customizable limit.
@@ -83,7 +82,7 @@ Abir
   
 --
 
-*Question 3*:   
+# Question 3:   
 
 
 From: marc@hotmail.com  
