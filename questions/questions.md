@@ -82,7 +82,7 @@ Abir
   
 --
 
-# Question 3:   
+ *Question 3:*   
 
 
 From: marc@hotmail.com  
@@ -95,7 +95,7 @@ Hi, my website is not working and here's the error:
 Can you fix it please?  
 
 
-*Answer 3:*
+# Answer 3:
 
 Hi Marc,
 
